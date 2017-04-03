@@ -28,7 +28,6 @@ class Diary:
 		while True:
 			r = raw_input('')
 			if r.lower() == 'exitnow':
-				print 'Done'
 				break
 			else:
 				self.f.write(r)
