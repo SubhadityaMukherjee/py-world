@@ -1,3 +1,4 @@
+#author: Subhaditya Mukherjee
 import time,os
 class Diary:
 	def __init__(self):
