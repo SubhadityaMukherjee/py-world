@@ -1,4 +1,4 @@
-#clock
+# clock
 
 A minimal clock for the command line.
 
