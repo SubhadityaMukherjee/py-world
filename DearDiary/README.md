@@ -1,4 +1,4 @@
-#Dear-Diary
+# Dear-Diary
 
 A simple program to create and view Diary Entries
 
