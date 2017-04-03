@@ -1,3 +1,4 @@
+#author: Subhaditya Mukherjee
 import time
 m = int(time.strftime('%M'))
 s = int(time.strftime('%S'))
