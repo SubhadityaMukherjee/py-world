@@ -1,3 +1,4 @@
+#author: Subhaditya Mukherjee
 import os
 os.system('color F0')
 w = 0
