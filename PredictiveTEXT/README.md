@@ -5,3 +5,7 @@ Rudimentary next word predictor which lets one create sentences with predictions
 <b>BOOK CREATOR</b>
 
 Rudimentary sentence creator which randomly creates sentences using the Predict libraries.
+
+<b>Data</b>
+
+Rudimentary data aggregated from multiple randomly chosen books using Predict
