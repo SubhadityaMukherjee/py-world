@@ -1,46 +1,46 @@
-def getdata(n):
-    import datetime as dt
-    #start = dt.datetime(int(input('Enter year to start: ')), int(input('Start month: ')), int(input('Start date: '))) 
+import datetime as dt
+import csv
+import matplotlib.pyplot as plt
+from matplotlib import style
+import pandas as pd
+import pandas_datareader.data as web
+from sklearn import datasets, linear_model
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+import numpy as np
+from sklearn.metrics import mean_squared_error
+from sklearn.cross_validation import train_test_split
+dates,prices=[],[]
+
+def getdata(n,x):
+
+    #start = dt.datetime(int(input('Enter year to start: ')), int(input('Start month: ')), int(input('Start date: ')))
     #end = dt.datetime(int(input('Enter year to end: ')), int(input('End month: ')), int(input('End date: ')))
-    
-    start = dt.datetime(2000,1,1) #test
+
+    start = dt.datetime(2017,1,1) #test
     end = dt.datetime(2017,12,20) #test
-    
-    import matplotlib.pyplot as plt
-    from matplotlib import style
-    import pandas as pd
-    import pandas_datareader.data as web
-    
-    #df = web.DataReader(n, "yahoo", start, end) #data frame
-    df = pd.read_csv('appl.csv') #test
-    #print(df.head)
-    
-    from sklearn import datasets, linear_model
-    from sklearn.preprocessing import PolynomialFeatures
-    import numpy as np
-    
-    
+
+    #df = web.DataReader(n, "yahoo", start, end).to_csv("aapl.csv") #data frame
+    df = pd.read_csv('aapl.csv') #test
+
+    global dates,prices
+
     de = df['Date'].values
+    ye = df['Close'].values
     d = []
     for a in de:
         d.append(int(a.split('-')[0]))
-    ye = df['Adj Close'].values
-    d = np.array(d,dtype = np.uint64).reshape(-1,1)
-    ye = ye.reshape(-1,1)
-    
-    reg = linear_model.LinearRegression(fit_intercept=True, normalize=False).fit(d,ye)
-    
-    plt.plot(d, ye,  color='red')
-    plt.plot(d, reg.predict(d), color='blue', linewidth=1)
-    plt.xlabel('Time')
-    plt.ylabel('Value in Dollar')
-    plt.show()
 
-    
-    #style.use('ggplot')
-    #df['Adj Close'].plot() #Create plot
-    #plt.show() #Display plot
+    dates = np.array(d)
+    prices = ye
+    dates = np.reshape(dates, (len(dates),1)) # converting to matrix of n X 1
+    prices = np.reshape(prices, (len(prices),1))
 
-    return df # get data frame
+    #da_train,pr_train,da_test,pr_test = train_test_split(dates,prices,test_size =0.2,random_state =4)
+    #reg = linear_model.LinearRegression().fit(da_train[:len(pr_train)],pr_train)
+    #print(reg.score(da_test[:len(pr_test)],pr_test))
+    
+    
+
 #getdata(input('Enter Company Name to Display(eg APPLE: AAPL): ').upper())
-getdata('aapl') #test
+print(getdata('aapl',2017)) #test
