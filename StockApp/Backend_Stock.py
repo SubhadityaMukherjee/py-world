@@ -1,46 +1,50 @@
-import datetime as dt
 import csv
-import matplotlib.pyplot as plt
-from matplotlib import style
-import pandas as pd
-import pandas_datareader.data as web
-from sklearn import datasets, linear_model
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LinearRegression
 import numpy as np
-from sklearn.metrics import mean_squared_error
-from sklearn.cross_validation import train_test_split
-dates,prices=[],[]
+from sklearn import linear_model
+import matplotlib.pyplot as plt
+from datetime import datetime
+import datetime
+import pandas_datareader.data as web
 
-def getdata(n,x):
+dates = []
+prices = []
 
-    #start = dt.datetime(int(input('Enter year to start: ')), int(input('Start month: ')), int(input('Start date: ')))
-    #end = dt.datetime(int(input('Enter year to end: ')), int(input('End month: ')), int(input('End date: ')))
+csvname = ''
 
-    start = dt.datetime(2017,1,1) #test
-    end = dt.datetime(2017,12,20) #test
+def getfromserver(n):
+    start = datetime.datetime(2017,12,1) #test
+    end = datetime.datetime(2017,12,24) #testtest
+    print("Checking between ",start,' and ',end)
 
-    #df = web.DataReader(n, "yahoo", start, end).to_csv("aapl.csv") #data frame
-    df = pd.read_csv('aapl.csv') #test
+    df = web.DataReader(n, "yahoo", start, end).to_csv("temp.csv") #data frame
 
-    global dates,prices
 
-    de = df['Date'].values
-    ye = df['Close'].values
-    d = []
-    for a in de:
-        d.append(int(a.split('-')[0]))
+def get_data(filename):
+    with open(filename, 'r') as csvfile:
+        csvFileReader = csv.reader(csvfile)
+        next(csvFileReader) # skipping column names
+        for row in csvFileReader:
+            dates.append(int(row[0].split('-')[0]))
+            #prices.append(float(row[5])) #check adj close- not really accurate
+            prices.append(float(row[1]))
+    return
 
-    dates = np.array(d)
-    prices = ye
+def predict_price(dates, prices, x):
     dates = np.reshape(dates, (len(dates),1)) # converting to matrix of n X 1
     prices = np.reshape(prices, (len(prices),1))
-
-    #da_train,pr_train,da_test,pr_test = train_test_split(dates,prices,test_size =0.2,random_state =4)
-    #reg = linear_model.LinearRegression().fit(da_train[:len(pr_train)],pr_train)
-    #print(reg.score(da_test[:len(pr_test)],pr_test))
     
+    linear_mod = linear_model.LinearRegression() # defining the linear regression model
+    linear_mod.fit(dates, prices) # fitting the data points in the model
+    plt.scatter(dates, prices, color= 'black', label= 'Data') # plotting the initial datapoints 
+    plt.xlabel('Date')
+    plt.ylabel('Price')
+    plt.title('Linear Regression')
+    plt.legend()
+    plt.show()
     
-
-#getdata(input('Enter Company Name to Display(eg APPLE: AAPL): ').upper())
-print(getdata('aapl',2017)) #test
+    return linear_mod.predict(x)[0][0], linear_mod.coef_[0][0], linear_mod.intercept_[0]
+getfromserver(input('Enter company name as per market: ').upper())
+get_data('temp.csv') # calling get_data method by passing the csv file to it
+x = int(input('Enter date in this month you want to check for: '))
+predicted_price, coefficient, constant = predict_price(dates, prices, x)  
+print("\nThe stock open price for ",x, "2is: $", str(predicted_price))
