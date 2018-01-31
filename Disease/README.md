@@ -1,4 +1,4 @@
-##   Subhaditya Mukherjee: 17BCE2193
+#   README
 
 #   Disease Prediction using machine learning
 
@@ -39,4 +39,4 @@ The cliche of "prevention is better than cure" has always been one of the most r
     - number of devices at home (ability to provide)
 * Occupation Hazard
 * People living around/in Previous Disaster Zones
-* 
+*
