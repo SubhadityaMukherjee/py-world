@@ -1,0 +1,106 @@
+[
+  {
+    "value": "haze",
+    "synonyms": [
+      "haze"
+    ]
+  },
+  {
+    "value": "fog",
+    "synonyms": [
+      "fog",
+      "mist"
+    ]
+  },
+  {
+    "value": "hurricane",
+    "synonyms": [
+      "hurricanes",
+      "hurricane"
+    ]
+  },
+  {
+    "value": "thunderstorm",
+    "synonyms": [
+      "thunderstorm"
+    ]
+  },
+  {
+    "value": "foggy",
+    "synonyms": [
+      "foggy"
+    ]
+  },
+  {
+    "value": "ice",
+    "synonyms": [
+      "ice"
+    ]
+  },
+  {
+    "value": "rain",
+    "synonyms": [
+      "rain",
+      "raining"
+    ]
+  },
+  {
+    "value": "sun",
+    "synonyms": [
+      "sunny",
+      "sun"
+    ]
+  },
+  {
+    "value": "wind",
+    "synonyms": [
+      "wind",
+      "windy"
+    ]
+  },
+  {
+    "value": "shower",
+    "synonyms": [
+      "shower",
+      "showers"
+    ]
+  },
+  {
+    "value": "snow",
+    "synonyms": [
+      "snow",
+      "snowing"
+    ]
+  },
+  {
+    "value": "storm",
+    "synonyms": [
+      "storm"
+    ]
+  },
+  {
+    "value": "smoke",
+    "synonyms": [
+      "smoke"
+    ]
+  },
+  {
+    "value": "rain snow",
+    "synonyms": [
+      "rain snow"
+    ]
+  },
+  {
+    "value": "clouds",
+    "synonyms": [
+      "clouds",
+      "cloudy"
+    ]
+  },
+  {
+    "value": "overcast",
+    "synonyms": [
+      "overcast"
+    ]
+  }
+]

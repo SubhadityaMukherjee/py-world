@@ -1,0 +1,111 @@
+[
+  {
+    "value": "1",
+    "synonyms": [
+      "england",
+      "england",
+      "english",
+      "poms",
+      "pommies"
+    ]
+  },
+  {
+    "value": "2",
+    "synonyms": [
+      "australia",
+      "aussies",
+      "aus",
+      "aussie",
+      "oz",
+      "kangaroos",
+      "australian",
+      "Australian"
+    ]
+  },
+  {
+    "value": "3",
+    "synonyms": [
+      "south africa",
+      "sa",
+      "s africa",
+      "south african",
+      "south africans",
+      "proteas",
+      "SA"
+    ]
+  },
+  {
+    "value": "4",
+    "synonyms": [
+      "west indies",
+      "windies",
+      "WI",
+      "wi",
+      "caribbean"
+    ]
+  },
+  {
+    "value": "5",
+    "synonyms": [
+      "new zealand",
+      "nz",
+      "NZ",
+      "kiwis",
+      "kiwi",
+      "Kiwi"
+    ]
+  },
+  {
+    "value": "6",
+    "synonyms": [
+      "india",
+      "indian",
+      "indians",
+      "ind",
+      "IND"
+    ]
+  },
+  {
+    "value": "7",
+    "synonyms": [
+      "pakistan",
+      "pak",
+      "Pak",
+      "paki",
+      "pakistani",
+      "PAK"
+    ]
+  },
+  {
+    "value": "8",
+    "synonyms": [
+      "sri lanka",
+      "s lanka",
+      "SL",
+      "sl",
+      "lankans",
+      "lankan"
+    ]
+  },
+  {
+    "value": "9",
+    "synonyms": [
+      "zimbabwe",
+      "zim",
+      "Zim",
+      "ZIM",
+      "zimbabwean"
+    ]
+  },
+  {
+    "value": "25",
+    "synonyms": [
+      "25",
+      "bangladesh",
+      "bangladeshi",
+      "BAN",
+      "ban",
+      "Ban"
+    ]
+  }
+]

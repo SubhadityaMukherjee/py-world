@@ -1,0 +1,14 @@
+[
+  {
+    "value": "@favourite:subject is Computer Science",
+    "synonyms": [
+      "@favourite:subject is Computer Science"
+    ]
+  },
+  {
+    "value": "@favourite:Color is Red",
+    "synonyms": [
+      "@favourite:Color is Red"
+    ]
+  }
+]
