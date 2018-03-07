@@ -1,7 +1,11 @@
-# py-world
+# the-world
 
-- Code to both keep a journal and learn from experts. Using multiple libraries.
+- Code to both keep a journal and learn from experts. 
 
-- All the code in this repo is my own.
+- All the code in this repo is my own and not copied from any where
 
-- ALMOST ALL CODES ARE IN PYTHON.
+- Any codes which look alike is unintentional
+
+- There are codes of python, HTML, api.ai, C++ etc..
+
+- Please fork instead of downloading. Ive put it up in hopes that it would help someone somwhere, but they did take a lot of time and effort and I would appreciate it if you respected that.
