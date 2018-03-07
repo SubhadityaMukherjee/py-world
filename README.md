@@ -1,4 +1,4 @@
-# the-world
+# The-world
 
 - Code to both keep a journal and learn from experts. 
 
