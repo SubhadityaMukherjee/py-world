@@ -1,6 +1,6 @@
 import json, collections
 f = open('Data.txt','a+',encoding = 'utf-8',errors = 'ignore')
-o = open('dat.txt','r',encoding = 'utf-8',errors = 'ignore')
+o = open('dat.txt','a+',encoding = 'utf-8',errors = 'ignore')
 h = open('history.txt','a+',encoding = 'utf-8',errors = 'ignore')
 ntsp = list(r"\<>?/!@#$%^&*()_-+=,.")
 nt = [r"\"",r"\'"]+ntsp
@@ -86,4 +86,4 @@ def writetext():
 		pass
 
 #fortheword()
-#writetext()
+writetext()
