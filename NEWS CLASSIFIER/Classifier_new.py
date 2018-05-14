@@ -88,8 +88,9 @@ def Training():
     # print(list(encoder.classes_))
     # print(nb.score(X_test,Y_test))
     result = nb.predict(x[-1])
+    #print(encoder.classes_)
     d = {'[0]': "Try this again. There seems to be an error here.", '[1]': "Business", '[2]': "Entertainment",
-         '[3]': "Politics", '[4]': "Sports", '[5]': "Technology"}
+         '[3]': "Health", '[4]': "Politics", '[5]': "Sports",'[6]':"Technology"}
     fin_result = d[str(result)]
 
     return "This article is of the class: " + fin_result
