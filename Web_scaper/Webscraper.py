@@ -41,12 +41,6 @@ def list_of_links():
                        max_results=int(input('Enter number of websites to search from: '))):
         l.append(link)
     c = int(input("Enter 1 if you want to search wiki and 2 if you don't: "))
-    if c == 2:
-        le = len(l)
-        for a in range(le):
-            if "wiki" in l[a]:
-                l.pop(a)
-                le-=1
     return l
 
 
