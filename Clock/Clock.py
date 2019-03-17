@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import subprocess as sp
 import time
 class Time:
     def __init__(self):
@@ -12,11 +11,11 @@ class Time:
 
     def display(self):
 
-        print '---------------------'
-        print self.upgradeddisplay(self.h), 'HOURS'
-        print self.upgradeddisplay(self.m), 'MINUTES'
-        print self.upgradeddisplay(self.s), 'SECONDS'
-        print '---------------------'
+        print('---------------------')
+        print(self.upgradeddisplay(self.h), 'HOURS')
+        print(self.upgradeddisplay(self.m), 'MINUTES')
+        print(self.upgradeddisplay(self.s), 'SECONDS')
+        print('---------------------')
 
 
     def upgradeddisplay(self,n):
@@ -34,5 +33,4 @@ class Time:
 while True:
     a = Time()
     time.sleep(1)
-    x=sp.call('clear',shell=True)
     a.display()
